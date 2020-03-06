@@ -1,0 +1,359 @@
+/*
+Theme Name: Linux Academy Study Guide Template 11-15-2019
+*/
+
+@font-face {font-family: PlexSans;src: url(./fonts/IBMPlexSans-Regular.ttf);}
+@font-face {font-family: PlexMono;src: url(./fonts/IBMPlexMono-Regular.ttf);}
+@font-face {font-family: PlexSansLight;  src: url(./fonts/IBMPlexSans-ExtraLight.ttf);}
+
+
+@page :first {
+  size: portrait;
+  padding:0cm;
+  border-left-style: none;
+  background:none;
+  background: url("images/cover-image.png") no-repeat left;
+  background-size: 10cm;
+  background-position: top 1cm left;
+  margin-top:1cm;
+  margin-bottom:1cm;
+
+  @top-left {
+   background:none;
+   content: '';
+   height: 1cm;
+   text-align: center;
+   width: 5cm;
+   font-size:1em;
+   font-weight:bold;}
+
+   @top-center {
+    background: none;
+    content: ''; }
+   @top-right {
+    background: none;
+    content: ''; }
+
+  @bottom-left {
+    height: 1.5cm;
+    width:5cm;
+     }
+
+  @bottom-left img {padding-left:.2cm;padding-right:.2cm;float:left;margin-top:-.4cm;width:4.2cm}
+  @bottom-center {
+    background: none;
+    content: ''; }
+  @bottom-right {
+    background: none;
+    content: ''; }
+  @bottom-right-corner {
+    background: none;
+    border-left: 1px solid #fff;
+    content: '';}
+    }
+
+@page {
+ font-family: PlexSans;
+ size: portrait;
+ margin-top:1cm;
+ padding:.5cm;
+ border-left-style: solid; border-left-width: 1px; border-color: #eee;
+  @top-left {
+   background: #000;
+   color:#fff;
+   content: string(title) " | Resume ";
+   height: 1cm;
+   text-align: center;
+   width: auto;
+   font-size:1em;
+   font-weight:bold;
+   padding-right:.5cm;
+   padding-left:.5cm;
+   }
+
+  @top-center {
+   background: none;
+    content: none;
+    margin-bottom: 2cm;
+    }
+  @top-right {
+    background: none;
+    content: none;}
+  @bottom-left {
+    background: none;
+    content: none; }
+  @bottom-right {
+    /*content: url("images/100x20_Nvy_LA_Logo.svg");*/
+    height: 1cm;
+    vertical-align: middle;
+    margin-top:.4cm;
+    width: 5.5cm; }
+  @bottom-right img {width:10%;padding-right:.2cm;padding-top:.1cm;z-index: -1;}
+
+  @bottom-right-corner {
+    background: #fff;
+    content: counter(page);
+    width: 2cm;
+    height:.5cm;
+    /*border-left: 1px solid #000;*/
+    margin-top:.5cm;
+    padding:.2cm;
+    font-size: 10pt;}
+    }
+
+@page :blank {
+  size: portrait;
+  @top-left {
+   padding:0cm;
+   background: #000;
+   color:#fff;
+   content: string(title) " | Resume ";
+   height: 1cm;
+   text-align: center;
+   width: 5cm;
+   font-size:1em;
+   font-weight:bold;}
+  @top-center {
+    content: none; }
+  @top-right {
+    content: none; }
+    @bottom-right {
+    background: none;
+    content: ''; }
+  @bottom-right-corner {
+    background: none;
+    border-left: 1px solid #fff;
+    content: '';}
+
+    }
+
+@page no-chapter {
+  size: portrait;
+  border-left-style: none;
+  @top-left {
+   background: #000;
+   color:#fff;
+   content: string(title) " | Resume ";
+   height: 1cm;
+   text-align: center;
+   width: auto;
+   font-size:1em;
+   font-weight:bold;
+   padding-right:.5cm;
+   padding-left:.5cm;}
+  @top-center {
+    content: none; }
+  @top-right {
+    content: none; }
+  @bottom-left {
+    background: none;
+    content: none;
+    z-index: -1; }
+  @bottom-center {
+    content: none;
+    z-index: -1; }
+  @bottom-right {
+    /*content: url("images/100x20_Nvy_LA_Logo.svg");*/
+    font-size: 9pt;
+    height: 1cm;
+    vertical-align: middle;
+    margin-bottom:.4cm;
+    width: 5.5cm;
+    z-index: -1; }
+  @bottom-right img {width:10%;padding-right:.2cm;padding-top:.1cm;z-index: -1;}
+  }
+
+body { font-family: PlexSans;color: #000; line-height:1.25em;padding:.25cm;}
+
+header{margin-left:1cm; margin-top:15cm;border-left: 1px solid #aaa;min-height:6.5cm;}
+#header_bottom_text{/*position:absolute;bottom:6.2cm;*/}
+
+h1.title {font-family:PlexSans;font-weight:100;font-size:2.5em;line-height:1em; padding-left:1cm;color:#87898C;}
+p.subtitle{margin-left:1cm;margin-bottom:1.5cm;font-weight:bold;}
+p.author{margin-left:1cm;margin-top:0; margin-bottom:0;font-weight:bold;}
+p.email{margin-left:1cm;margin-top:0; margin-bottom:0;font-weight:bold;}
+p.email a {color:#000;}
+p.date{margin-left:1cm;margin-top:0; margin-bottom:0;font-weight:bold;}
+
+#contentsbox { height:1.5cm; width:4cm; border-bottom:1px solid #aaa;margin-top:1.5cm;margin-bottom:1.5cm;}
+#contentsbox p {font-family:PlexSans;font-weight:100;font-size:2.5em;}
+
+
+figure {
+    max-width:50%;
+    float:right;
+}
+figure img {
+    vertical-align: top;
+    max-width:100%;
+    max-height:9cm;
+    border-radius:10px;
+    float:right
+}
+figure figcaption {
+    text-align: center;
+}
+
+li img {
+/*    vertical-align: top;*/
+    max-width:75%;
+    /*max-height:9cm;*/
+    border-radius:10px;
+
+    display: block;
+}
+/*
+Can't remember now why I styled a left floating image, but it should probably be done like the figure method above
+when I revisit it
+*/
+/*
+.l img {float:left;max-width:40%; max-height:9cm;border-radius:10px;margin-left:-1cm;margin-right:1cm;}
+*/
+
+a:link{outline:none;color:#000;font-weight:bold;}
+
+pre {font-family: PlexMono;font-size:.95em; margin-left:.5cm; background-color:#eee;padding:2px;
+            white-space: pre-wrap;
+            word-wrap: normal;}
+code {font-family: PlexMono;font-size:.95em;background-color:#eee;padding:2px;}
+
+pre code{background-color:#eee;}
+
+pre.sourceCode{color:initial;}
+
+/* ------------------- Lists --------------------------*/
+
+/* Top level is normal, next level is just bullets, no numbers */
+ul li {margin-left:-.25cm;font-weight:normal;margin-top:.2cm;}
+ul li ul {list-style-type: disc;}
+ul li ul li {margin-left:-.25cm;font-weight:lighter;}
+ul li ul li ul {list-style-type: none;}
+
+/* Top level is bold, next level is just bullets, no numbers */
+.b ul li {margin-left:-.25cm;font-weight:bold;margin-top:.2cm;}
+.b ul li ul {list-style-type: disc;}
+.b ul li ul li {margin-left:-.25cm;font-weight:lighter;}
+.b ul li ul li ul {list-style-type: none;}
+
+/* Top level is bold, next level is numbered */
+.bwn ul li {margin-left:-.25cm;font-weight:bold;margin-top:.2cm;}
+.bwn ul li ul {list-style-type: decimal;}
+.bwn ul li ul li {margin-left:-.25cm;font-weight:lighter;}
+.bwn ul li ul li ul {list-style-type: none;}
+
+/* Top level is bold numbers, next level is regular bullets */
+.bn ul {list-style-type: decimal;}
+.bn ul li {margin-left:-.25cm;font-weight:bold;margin-top:.2cm;}
+.bn ul li ul {list-style-type: disc;}
+.bn ul li ul li {margin-left:-.25cm;font-weight:lighter;}
+.bn ul li ul li ul {list-style-type: none;}
+
+
+h1 {string-set:title content();}
+
+h2 {
+ max-width:80%;
+ line-height:2em; vertical-align: middle;padding-left:1cm; padding-top:.2cm; padding-bottom:.2cm;font-size:.9em; margin-left:-1.5cm;/*width:60%;*/ background-color:#fff;
+ border-radius:5px;
+ border-top: 1px solid #eee;
+ border-left: 1px solid #eee;
+ border-right: 1px solid #aaa;
+ border-bottom: 1px solid #aaa;
+ page-break-before: always;
+ font-size:1.5em;
+ }
+
+h3 {font-size:1.4em;}
+h4 {font-size:1.3em;}
+h5 {font-size:1.2em;}
+h6 {font-size:1.1em;}
+
+h1 code {background:none;}
+h2 code {background:none;}
+h3 code {background:none;}
+h4 code {background:none;}
+h5 code {background:none;}
+h6 code {background:none;}
+
+/*---------------------------------------- NAV (also known as Table of Contents) -----------------------------------------*/
+
+/*--------------------------------------------
+08-14-2019
+By far, the biggest issue with this template
+is the fact that the TOC is only one column.
+When I have recovered from this ruckus, I
+will be digging in and trying to make it work
+--------------------------------------------*/
+
+
+nav {position:relative;margin-left:-.5em;background: none;string-set:heading content(); page:no-chapter;page-break-after: always;}
+nav ul {margin-top:0;margin-left:-.5em;list-style-type: none;}
+
+nav ul li {margin-top:.75em; margin-bottom:1em; width:100%;}
+nav ul li a {
+  border-radius:5px;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  display:block;
+  height:2em;
+  padding-top:.6em;
+  padding-left:.6em;
+  margin-left:-1.5em;
+}
+
+nav ul li a::after {content: target-counter(attr(href url), page, decimal); float:right;margin-right:10px;}
+nav ul li ul {list-style-type: none; border-left-style: solid; border-left-width: 1px; border-color: #eee; margin-top:1.5em;}
+nav ul li ul li {margin-left:-.5em;color:#ff0000;}
+nav ul li ul li a {border:none;font-family:PlexSans;margin-top:-1.5em;}
+nav ul li ul li a::after {font-size:.75em;}
+nav code {background:none;}
+nav a{text-decoration:none;outline:none;color:#000;}
+
+table {
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #ddd;padding: 10px;
+}
+
+blockquote{color:#fff; background-color:#777;padding:2mm;border-radius:4px;border:1px solid #000;}
+blockquote pre, blockquote code {background-color:#555;}
+
+
+.pb { page-break-before: always; }
+
+/*--------------------------------------------
+08-14-2019
+The Python looks good here, the Bash not
+so much. So we're leaving them black, at
+least for now, to match the original template
+--------------------------------------------*/
+
+
+code.sourceCode.python {color:#d49173;}
+.op {color:#89d473;}
+.dv {color: #ff0000;}
+code.sourceCode.bash {color:#739ed4;}
+.ex{color:#b473d4;}
+code.sourceCode.ruby {color:#d49173;}
+.op {color:#89d473;}
+.dv {color: #ff0000;}
+
+/*--------------------------------------------
+08-14-2019
+Here I was trying to dork with image captions,
+but they keep showing up on the left
+--------------------------------------------*/
+
+/*
+figure {
+  display: table;
+}
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  float:right;
+}
+*/
